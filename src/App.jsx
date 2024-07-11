@@ -1,11 +1,15 @@
-import Header from "./components/Header";
-import Searchbar from "./components/Searchbar";
+import { useState } from "react";
+import Search from "./components/Search";
+import FoodList from "./components/FoodList";
 
 function App() {
+  const [foodData, setFoodData] = useState([]);
+
   return (
     <>
-      {/* <Header /> */}
-      <Searchbar />
+      {/* <Searchbar /> */}
+      <Search foodData={foodData} setFoodData={setFoodData} />
+      <FoodList foodData={foodData} />
     </>
   );
 }
