@@ -1,11 +1,9 @@
 import { useEffect, useState, React } from "react";
-import Header from "./Header";
 
 import { IoIosSearch } from "react-icons/io";
 import bg1 from "../assets/img/bg1.png";
 
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
-
 const API_KEY = "1b26467a53f344a48b8e7e2479072811";
 
 // export default function Search({ foodData, setFoodData }) {
@@ -70,8 +68,7 @@ export default function Search({ setFoodData }) {
 
   return (
     <>
-      <Header />
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-16 justify-center items-center sm:p-24 py-24 px-16 border-black">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-16 justify-center items-center sm:p-24 py-24 md:px-16 px-10 border-black">
         <div className="">
           <div className="font-heading md:text-5xl text-3xl my-5 font-bold text-brown">
             Explore the World of Test And Aromas

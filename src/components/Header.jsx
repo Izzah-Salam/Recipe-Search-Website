@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [toggle, setToggle] = useState(false);
@@ -25,9 +26,12 @@ export default function Header() {
         <div className="hidden md:flex justify-between items-center">
           <ul className="flex justify-center ">
             <li className="mx-3">
-              <a className="hover:border-b-2 border-brown duration-75 " href="">
+              <Link
+                className="hover:border-b-2 border-brown duration-75 "
+                to={"/"}
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="mx-3">
               <a className="hover:border-b-2 border-brown duration-75 " href="">
