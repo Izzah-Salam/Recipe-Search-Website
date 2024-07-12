@@ -12,7 +12,6 @@ export default function FoodItems({ food, setFoodId }) {
           }}
           className="bg-pink py-2 px-6 mb-4 text-brown rounded-md "
         >
-          {/* View Recipe */}
           <Link to={"/foodDetail"}>View Recipe</Link>
         </button>
       </div>
