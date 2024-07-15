@@ -31,7 +31,7 @@ export default function RecipofDay() {
     <>
       <div className="mt-32">
         {recipe ? (
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 lg:p-10 p-16 justify-center items-center">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 lg:p-10 md:p-16 p-5 justify-center items-center">
             <div className="px-5">
               <h1 className="text-brown md:text-5xl text-4xl font-semibold font-heading my-3">
                 Recipe Of The Day
