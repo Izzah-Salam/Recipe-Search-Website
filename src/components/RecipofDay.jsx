@@ -31,16 +31,16 @@ export default function RecipofDay() {
     <>
       <div className="mt-32">
         {recipe ? (
-          <div className="grid grid-cols-2 gap-20 p-20 z-10">
-            <div className="px-10">
-              <h1 className="text-brown text-5xl font-semibold font-heading my-3">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 lg:p-10 p-16 justify-center items-center">
+            <div className="px-5">
+              <h1 className="text-brown md:text-5xl text-4xl font-semibold font-heading my-3">
                 Recipe Of The Day
               </h1>
-              <h1 className="text-brown text-2xl font-semibold font-text my-3">
+              <h1 className="text-brown md:text-2xl text-xl font-semibold font-text my-3">
                 {recipe.title}
               </h1>
               <StarRating rating={rating} />
-              <p>
+              <p className="my-4 font-sm text-gray-500">
                 Today's featured recipe, {recipe.title}, is a culinary
                 masterpiece that promises to delight your taste buds. With a
                 perfect balance of flavors and an easy-to-follow preparation,{" "}
@@ -48,15 +48,25 @@ export default function RecipofDay() {
                 table. Dive into this delightful dish and discover why{" "}
                 {recipe.title} is a must-try for every food enthusiast.
               </p>
-              <div>
-                <span>⌚{recipe.readyInMinutes}</span>
-                <span> Serving{recipe.servings}</span>
-                <span> Healty{recipe.healthScore} %</span>
-                <span> {recipe.diets[0]} </span>
+              <div className="flex mt-3 flex-wrap justify-center md:justify-normal ">
+                <span className="mx-2 font-text font-semibold my-2">
+                  🕐 Ready in {recipe.readyInMinutes} Min
+                </span>
+                <span className="mx-2 font-text font-semibold my-2">
+                  🍴 {recipe.servings} Serving
+                </span>
+                <span className="mx-2 font-text font-semibold my-2">
+                  Healty {recipe.healthScore} %
+                </span>
               </div>
             </div>
-
-            <img className="" src={recipe.image} alt={recipe.title} />
+            <div className="flex justify-center">
+              <img
+                className="rounded-2xl flex justify-center"
+                src={recipe.image}
+                alt={recipe.title}
+              />
+            </div>
           </div>
         ) : (
           <p className="text-center text-2xl text-brown">Loading...</p>

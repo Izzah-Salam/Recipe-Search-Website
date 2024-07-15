@@ -22,13 +22,14 @@ function App() {
             <>
               <Search foodData={foodData} setFoodData={setFoodData} />
               <FoodList foodData={foodData} setFoodId={setFoodId} />
+              <RecipofDay />
             </>
           }
         />
 
         <Route path="/foodDetail" element={<FoodRecipe foodId={foodId} />} />
       </Routes>
-      <RecipofDay />
+
       <Footer />
     </>
   );
