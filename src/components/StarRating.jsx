@@ -3,7 +3,7 @@ import React from "react";
 const StarRating = ({ rating }) => {
   return (
     <div>
-      {Array.map({ length: 5 }, (_, index) => (
+      {Array.from({ length: 5 }, (_, index) => (
         <Star key={index} filled={index < rating} />
       ))}
     </div>
